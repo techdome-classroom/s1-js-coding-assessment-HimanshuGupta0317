@@ -5,7 +5,7 @@ const decodeTheRing = function (s, p) {
   // Create a 2D array for dynamic programming
   const dp = Array.from({ length: m + 1 }, () => Array(n + 1).fill(false));
 
-  // Empty pattern matches empty message
+
   dp[0][0] = true;
 
   for (let j = 1; j <= n; j++) {
@@ -14,7 +14,7 @@ const decodeTheRing = function (s, p) {
       }
   }
 
-  // Fill the dp array
+
   for (let i = 1; i <= m; i++) {
       for (let j = 1; j <= n; j++) {
           if (p[j - 1] === s[i - 1] || p[j - 1] === '?') {
