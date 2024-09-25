@@ -10,9 +10,9 @@ const getTotalIsles = function (grid) {
           return;
       }
 
-      grid[i][j] = 'W'; // Mark the land as visited by sinking the island
+      grid[i][j] = 'W';
 
-      // Explore all four directions
+      
       dfs(i + 1, j); // down
       dfs(i - 1, j); // up
       dfs(i, j + 1); // right
